@@ -1,0 +1,24 @@
+manifest:
+  version: 0.13
+
+  remotes:
+    - name: zephyr
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote: zephyr
+      revision: main
+      path: zephyr
+      import:
+        name-allowlist:
+          - hal_espressif
+          - cmsis
+          - toolchain-zephyr
+          - segger
+          - mbedtls
+          - littlefs
+
+  self:
+    path: app
+
